@@ -6,7 +6,7 @@ def main(source= "content", dest= "dist"):
     config = {
         "source": source,
         "dest": dest,
-        "parsers": [ssg.parsers.ResourceParsers()]
+        "parsers": list(ssg.parsers.ResourceParsers())
     }
 
     site = Site(**config).build()
