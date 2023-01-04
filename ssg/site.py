@@ -1,5 +1,4 @@
 from pathlib import Path
-import os
 
 class Site:
 
@@ -15,5 +14,5 @@ class Site:
         self.dest.mkdir(parents=True, exist_ok=True)
         
         for path in self.source.rglob("*"):
-            if os.path.isdir(path):
+            if path.is_dir():
                 self.create_dir(path)
