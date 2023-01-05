@@ -30,7 +30,7 @@ class Content(Mapping):
         self.data["type"] = type
 
     def __getitem__(self, key):
-        return self.data.get(key)
+        return self.data[key]
 
     def __iter__(self):
         for key, value in self.data.items():
